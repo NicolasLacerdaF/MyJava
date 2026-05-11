@@ -1,0 +1,32 @@
+🟩variable = um armazenamento reutilizável para um valor 
+Uma variável se comporta como se tivesse um valor que ela contém.
+
+🟥 Primitive = valor simples, armazenado na memória direta (stack)
+🟦 Reference = valor complexo, armazenado em um objeto na memória (heap)
+
+🟥 Primitive vs 🟦 Reference
+-------------------------------
+int                 string
+double              array
+char                object
+boolean
+--------------------------------
+
+🟥 int - x = 5; // x é uma variável do tipo int, armazenando o valor 5(número inteiro)
+🟥 double - pi = 3.14; // pi é uma variável do tipo double, armazenando o valor 3.14
+🟥 char - grade = 'A'; // grade é uma variável do tipo char, armazenando o valor 'A'
+🟥 boolean - isActive = true; // isActive é uma variável do tipo boolean, armazenando o valor true
+
+🟦string - name = "Alice"; // name é uma variável do tipo string, armazenando o valor "Alice"
+🟦array - numbers = [1, 2, 3, 4, 5]; // numbers é uma variável do tipo array, armazenando uma coleção de números
+🟦object - person = new Person(); // person é uma variável do tipo object, armazenando uma referência a um objeto Person
+
+
+
+--------------------------------
+2 etapas para criar uma variável:
+1. Declaração(declaration): informar o tipo e nome da variável
+2. Atribuição(assignment): atribuir um valor à variável
+
+-------
+
