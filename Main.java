@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
+
 public class Main {
 
     public static void main(String[] args){
+
 
 
         //Este é meu primeiro programa em java
@@ -32,16 +36,28 @@ char currency = '$';
 
 
 boolean isStudent = false;
-boolean forSale = false;
+boolean forSale = true;
 boolean isOnline = false;
 
 
 
 
-    String name = "John";
-    String city = "New York";
-    String food = "Pizza";
+    String name = "Nicolas"; //vale a pena lembrar que String é com S maiúsculo, pois é uma classe, e não um tipo primitivo
+    String city = "New York"; //vale a pena lembrar que se deve usar aspas duplas para String, e não aspas simples, pois aspas simples são para char
+    String email = "nicolas@example.com";
+    String car = "Mustang";
 
-    System.out.println("My name is " + name + ", I live in " + city + " and I love " + food + ".");
+
+
+    System.out.println("Hello, " + name + "! Welcome to " + city + ". Your email is " + email + " and you drive a " + car + ".");
+
+if (forSale) {
+    System.out.println("The " + car + " is for sale.");
+} else {
+    System.out.println("The " + car + " is not for sale.");
+    
+}
+
+
     }
 }

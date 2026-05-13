@@ -6,9 +6,9 @@ Uma variável se comporta como se tivesse um valor que ela contém.
 
 🟥 Primitive vs 🟦 Reference
 -------------------------------
-int                 string
-double              array
-char                object
+int                 String
+double              Array
+char                Object
 boolean
 --------------------------------
 
@@ -17,9 +17,9 @@ boolean
 🟥 char - grade = 'A'; // grade é uma variável do tipo char, armazenando o valor 'A'
 🟥 boolean - isActive = true; // isActive é uma variável do tipo boolean, armazenando o valor true
 
-🟦string - name = "Alice"; // name é uma variável do tipo string, armazenando o valor "Alice"
-🟦array - numbers = [1, 2, 3, 4, 5]; // numbers é uma variável do tipo array, armazenando uma coleção de números
-🟦object - person = new Person(); // person é uma variável do tipo object, armazenando uma referência a um objeto Person
+🟦String - name = "Alice"; // name é uma variável do tipo String, armazenando o valor "Alice"
+🟦Array - numbers = [1, 2, 3, 4, 5]; // numbers é uma variável do tipo Array, armazenando uma coleção de números
+🟦Object - person = new Person(); // person é uma variável do tipo Object, armazenando uma referência a um objeto Person
 
 
 
