@@ -7,8 +7,11 @@ public class SquareArea {
 
 //calculate the area of a rectangle 
 
-double width = 0;
+double largura = 0;
+double altura = 0;
+double area = 0;
 
+    Scanner scanner 
 
     }
 }
