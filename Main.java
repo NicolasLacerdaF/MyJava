@@ -21,6 +21,7 @@ public class Main {
 
       //apreviação de SYSTEM OUT PRINT É "SOUT"(mágica)
 
+    
 
 int age = 21;
 int year = 2024;

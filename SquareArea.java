@@ -11,7 +11,9 @@ double largura = 0;
 double altura = 0;
 double area = 0;
 
-    Scanner scanner 
+    Scanner scanner  = new Scanner(System.in);
+
+    Scanner
 
     }
 }

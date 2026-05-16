@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class Second {
+public class InputTest {
     public static void main(String[] args) {
         //Este é meu segundo programa em java
 

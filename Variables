@@ -13,7 +13,7 @@ boolean
 --------------------------------
 
 🟥 int - x = 5; // x é uma variável do tipo int, armazenando o valor 5(número inteiro)
-🟥 double - pi = 3.14; // pi é uma variável do tipo double, armazenando o valor 3.14
+🟥 double - pi = 3.14; // pi é uma variável do tipo double, armazenando o valor 3.14(valores com vírgula)
 🟥 char - grade = 'A'; // grade é uma variável do tipo char, armazenando o valor 'A'
 🟥 boolean - isActive = true; // isActive é uma variável do tipo boolean, armazenando o valor true
 
