@@ -1,19 +1,26 @@
 import java.util.Scanner;
 
-
 public class SquareArea {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        while (true) {
+            System.out.print("Digite a largura (ou 0 para sair): ");
+            double width = scanner.nextDouble();
 
-//calculate the area of a rectangle 
+            if (width == 0) {
+                System.out.println("Encerrando programa...");
+                break; // sai do loop
+            }
 
-double largura = 0;
-double altura = 0;
-double area = 0;
+            System.out.print("Digite a altura: ");
+            double height = scanner.nextDouble();
 
-    Scanner scanner  = new Scanner(System.in);
+            double area = width * height;
+            System.out.println("Área: " + area);
+            System.out.println("------------------");
+        }
 
-    Scanner
-
+        scanner.close();
     }
 }
