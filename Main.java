@@ -54,11 +54,10 @@ boolean isOnline = false;
 
 if (forSale) {
     System.out.println("The " + car + " is for sale.");
-} else {
+} 
+else {
     System.out.println("The " + car + " is not for sale.");
     
 }
-
-
     }
 }
