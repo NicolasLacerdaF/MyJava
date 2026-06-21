@@ -15,13 +15,9 @@ public class Formatodesaida {
 
 
     System.out.printf("Hello %s\n", name);
-
     System.out.printf("Your name starts with %c\n", firstLetter);
-
     System.out.printf("You are %d years old\n", age);
-
     System.out.printf("You are %.1f m tall\n", height);
-
     System.out.printf("You are employed: %b\n", isEmployed);
 
 

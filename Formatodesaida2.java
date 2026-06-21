@@ -14,9 +14,24 @@ public class Formatodesaida2 {
              double preço3 = -54.01;
 
 
-        System.out.printf("%.2f \n", preço1); //.1 significa que após a virgula vou querer apenas 1 digito
-        System.out.printf("%.1f \n", preço2); // arredonda 
-        System.out.printf("%.2f \n", preço3); // omite uma informação crucial
+        System.out.printf("%+.2f \n", preço1); //.1 significa que após a virgula vou querer apenas 1 digito
+        System.out.printf("%+.1f \n", preço2); // arredonda 
+        System.out.printf("%+.2f \n", preço3); // omite uma informação crucial
 
     }
 }
+// Algumas flags que vocês pode usar 
+
+/*   * GUIA COMPLETO DAS FLAGS DO printf() EM JAVA
+ * 
+ * Estrutura: %[flags][width][.precision]specifier
+ * 
+ * FLAGS DISPONÍVEIS:
+ * -   = Alinhamento à esquerda
+ * 0   = Preenchimento com zeros
+ * +   = Mostrar sinal para números positivos
+ * ' ' = Espaço para números positivos
+ * #   = Formato alternativo
+ * ,   = Separador de milhares
+ * (   = Números negativos entre parênteses
+ */
