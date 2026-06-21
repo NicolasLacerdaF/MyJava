@@ -3,7 +3,7 @@ public class Formatodesaida {
 
     //printf() - is a method used to format output
 
-    //% [flags], [width],[.precision],[specifier-character]
+    //% [flags], [width],[.precision],[specifier-character] ---!!!! importante, esse é o formato sempre!!!!
 
 
     String name = "Superman";
@@ -25,7 +25,7 @@ public class Formatodesaida {
     System.out.printf("You are employed: %b\n", isEmployed);
 
 
- System.out.printf("%s is %d years olddddddd" , name, age );
+ System.out.printf("%s is %d years old" , name, age );
 
 }
 }

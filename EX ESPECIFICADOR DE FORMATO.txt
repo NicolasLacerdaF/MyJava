@@ -1,0 +1,254 @@
+# EXEMPLOS DE CADA ESPECIFICADOR DE FORMATO
+
+===============================================================================
+
+## 1. ESPECIFICADORES BÁSICOS
+
+### %d - Inteiro decimal
+```java
+System.out.printf("%d", 42);                    // 42
+System.out.printf("%d", -123);                  // -123
+System.out.printf("%d", 1000000);               // 1000000
+```
+
+### %f - Ponto flutuante
+```java
+System.out.printf("%f", 3.14159);               // 3.141590
+System.out.printf("%f", 10.5);                  // 10.500000
+System.out.printf("%f", -7.25);                 // -7.250000
+```
+
+### %e - Notação científica (minúsculo)
+```java
+System.out.printf("%e", 123.456);               // 1.234560e+02
+System.out.printf("%e", 0.000123);              // 1.230000e-04
+System.out.printf("%e", 987654321.0);           // 9.876543e+08
+```
+
+### %E - Notação científica (maiúsculo)
+```java
+System.out.printf("%E", 123.456);               // 1.234560E+02
+System.out.printf("%E", 0.000123);              // 1.230000E-04
+System.out.printf("%E", 987654321.0);           // 9.876543E+08
+```
+
+### %g - Escolhe %f ou %e (mais compacto)
+```java
+System.out.printf("%g", 123.456);               // 123.456
+System.out.printf("%g", 0.000123);              // 1.23000e-04
+System.out.printf("%g", 3.14159);               // 3.14159
+```
+
+### %G - Igual %g, mas com E maiúsculo
+```java
+System.out.printf("%G", 123.456);               // 123.456
+System.out.printf("%G", 0.000123);              // 1.23000E-04
+System.out.printf("%G", 3.14159);               // 3.14159
+```
+
+### %c - Caractere
+```java
+System.out.printf("%c", 'A');                   // A
+System.out.printf("%c", 65);                    // A (código ASCII)
+System.out.printf("%c", '\u0041');              // A (Unicode)
+```
+
+### %s - String
+```java
+System.out.printf("%s", "Olá Mundo");           // Olá Mundo
+System.out.printf("%s", "Java");                // Java
+System.out.printf("%s", 123);                   // 123 (converte para string)
+```
+
+### %b - Booleano (minúsculo)
+```java
+System.out.printf("%b", true);                  // true
+System.out.printf("%b", false);                 // false
+System.out.printf("%b", 10 > 5);                // true
+System.out.printf("%b", null);                  // false
+```
+
+### %B - Booleano (maiúsculo)
+```java
+System.out.printf("%B", true);                  // TRUE
+System.out.printf("%B", false);                 // FALSE
+System.out.printf("%B", 10 > 5);                // TRUE
+```
+
+### %x - Hexadecimal (minúsculo)
+```java
+System.out.printf("%x", 255);                   // ff
+System.out.printf("%x", 16);                    // 10
+System.out.printf("%x", 42);                    // 2a
+```
+
+### %X - Hexadecimal (maiúsculo)
+```java
+System.out.printf("%X", 255);                   // FF
+System.out.printf("%X", 16);                    // 10
+System.out.printf("%X", 42);                    // 2A
+```
+
+### %o - Octal
+```java
+System.out.printf("%o", 255);                   // 377
+System.out.printf("%o", 8);                     // 10
+System.out.printf("%o", 42);                    // 52
+```
+
+### %h - Código hash hexadecimal (minúsculo)
+```java
+System.out.printf("%h", "Java");                // 7ea987ac (exemplo)
+System.out.printf("%h", 42);                    // 2a
+System.out.printf("%h", new Object());          // 7f8e9a1b (exemplo)
+```
+
+### %H - Código hash hexadecimal (maiúsculo)
+```java
+System.out.printf("%H", "Java");                // 7EA987AC (exemplo)
+System.out.printf("%H", 42);                    // 2A
+System.out.printf("%H", new Object());          // 7F8E9A1B (exemplo)
+```
+
+### %n - Quebra de linha
+```java
+System.out.printf("Linha 1%nLinha 2%n");        // Linha 1
+                                                  // Linha 2
+```
+
+### %% - Imprime o caractere %
+```java
+System.out.printf("Percentual: %d%%", 75);      // Percentual: 75%
+System.out.printf("%%");                        // %
+```
+
+===============================================================================
+
+## 2. ESPECIFICADORES DE DATA E HORA (usam %t)
+
+```java
+import java.util.Date;
+Date data = new Date();
+
+System.out.printf("%tH", data);                 // 14 (hora)
+System.out.printf("%tM", data);                 // 35 (minutos)
+System.out.printf("%tS", data);                 // 08 (segundos)
+System.out.printf("%td", data);                 // 09 (dia do mês)
+System.out.printf("%tm", data);                 // 06 (mês)
+System.out.printf("%tY", data);                 // 2026 (ano completo)
+System.out.printf("%ty", data);                 // 26 (ano 2 dígitos)
+System.out.printf("%tB", data);                 // June (mês completo)
+System.out.printf("%tb", data);                 // Jun (mês abreviado)
+System.out.printf("%tA", data);                 // Tuesday (dia completo)
+System.out.printf("%ta", data);                 // Tue (dia abreviado)
+System.out.printf("%tF", data);                 // 2026-06-09 (data ISO)
+System.out.printf("%tT", data);                 // 14:35:08 (hora ISO)
+
+// Exemplo combinado:
+System.out.printf("Data: %tF, Hora: %tT", data, data);
+// Data: 2026-06-09, Hora: 14:35:08
+```
+
+===============================================================================
+
+## 3. MODIFICADORES DE FORMATAÇÃO (COMBINADOS)
+
+### Precisão para decimais
+```java
+System.out.printf("%.2f", 3.14159);             // 3.14
+System.out.printf("%.3f", 3.14159);             // 3.142
+System.out.printf("%.0f", 3.14159);             // 3
+```
+
+### Largura mínima
+```java
+System.out.printf("%10d", 42);                  // "        42"
+System.out.printf("%5s", "Java");               // " Java"
+System.out.printf("%8f", 3.14);                 // " 3.140000"
+```
+
+### Alinhamento à esquerda
+```java
+System.out.printf("%-10s", "Java");             // "Java      "
+System.out.printf("%-10d", 42);                 // "42        "
+System.out.printf("%-10.2f", 3.14);             // "3.14      "
+```
+
+### Preenchimento com zeros
+```java
+System.out.printf("%05d", 42);                  // 00042
+System.out.printf("%08d", 123);                 // 00000123
+System.out.printf("%010.2f", 3.14);             // 0000003.14
+```
+
+### Combinações avançadas
+```java
+// Largura + precisão + alinhamento
+System.out.printf("%-10.2f", 3.14159);          // "3.14      "
+System.out.printf("%10.2f", 3.14159);           // "      3.14"
+System.out.printf("%010.2f", 3.14159);          // "0000003.14"
+
+// Largura + zeros + positivo/negativo
+System.out.printf("%+05d", 42);                 // +0042
+System.out.printf("%+05d", -42);                // -0042
+```
+
+===============================================================================
+
+## 4. EXEMPLOS COMPLETOS COM VÁRIOS ESPECIFICADORES
+
+```java
+// Múltiplos especificadores na mesma string
+System.out.printf("Nome: %s, Idade: %d, Altura: %.2f%n", 
+                  "João", 25, 1.75);
+// Nome: João, Idade: 25, Altura: 1.75
+
+// Tabela formatada
+System.out.printf("| %-10s | %5d | %8.2f |%n", "Produto A", 10, 99.99);
+System.out.printf("| %-10s | %5d | %8.2f |%n", "Produto B", 5, 149.50);
+// | Produto A |    10 |    99.99 |
+// | Produto B |     5 |   149.50 |
+
+// Data e hora com formatação
+System.out.printf("Data: %tD, Hora: %tr%n", data, data);
+// Data: 06/09/26, Hora: 02:35:08 PM
+```
+
+===============================================================================
+
+## 5. RESUMO DOS EXEMPLOS MAIS USADOS
+
+```java
+// Inteiros
+System.out.printf("%d", 42);                    // 42
+System.out.printf("%05d", 42);                  // 00042
+System.out.printf("%-5d", 42);                  // "42   "
+
+// Decimais
+System.out.printf("%.2f", 3.14159);             // 3.14
+System.out.printf("%.4f", 3.14159);             // 3.1416
+System.out.printf("%8.2f", 3.14159);            // "    3.14"
+
+// Strings
+System.out.printf("%s", "Java");                // Java
+System.out.printf("%10s", "Java");              // "     Java"
+System.out.printf("%-10s", "Java");             // "Java     "
+
+// Data
+System.out.printf("%tF", data);                 // 2026-06-09
+System.out.printf("%tT", data);                 // 14:35:08
+System.out.printf("%tB %td, %tY", data, data, data); // June 09, 2026
+
+// Booleano
+System.out.printf("%b", true);                  // true
+System.out.printf("%B", true);                  // TRUE
+
+// Hexadecimal
+System.out.printf("%x", 255);                   // ff
+System.out.printf("%X", 255);                   // FF
+
+// Porcentagem
+System.out.printf("Taxa: %d%%", 10);            // Taxa: 10%
+```
+
+===============================================================================
