@@ -6,10 +6,10 @@ public class Formatodesaida {
     //% [flags], [width],[.precision],[specifier-character]
 
 
-    String name = "Spongebob";
+    String name = "Superman";
     char firstLetter = 'S';
     int age = 30;
-    double height = 60.5;
+    double height = 1.80;
     boolean isEmployed = true;
 
 
@@ -19,6 +19,13 @@ public class Formatodesaida {
     System.out.printf("Your name starts with %c\n", firstLetter);
 
     System.out.printf("You are %d years old\n", age);
+
+    System.out.printf("You are %.1f m tall\n", height);
+
+    System.out.printf("You are employed: %b\n", isEmployed);
+
+
+ System.out.printf("%s is %d years olddddddd" , name, age );
 
 }
 }
